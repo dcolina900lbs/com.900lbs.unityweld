@@ -1,8 +1,8 @@
 # Unity-Weld
+
 [![NuGet](https://img.shields.io/nuget/dt/RSG.UnityWeld.svg)](https://www.nuget.org/packages/RSG.UnityWeld/)
 [![NuGet](https://img.shields.io/nuget/v/RSG.UnityWeld.svg)](https://www.nuget.org/packages/RSG.UnityWeld/)
 [![Build Status](https://travis-ci.org/Real-Serious-Games/Unity-Weld.svg?branch=master)](https://travis-ci.org/Real-Serious-Games/Unity-Weld)
-
 
 *[MVVM-style](https://msdn.microsoft.com/en-us/library/hh848246.aspx) data-binding system for Unity.*
 
@@ -10,21 +10,17 @@ Unity-Weld is a library for Unity 5+ that enables two-way data binding between U
 
 A series of articles on Unity Weld has been published on [What Could Possibly Go Wrong](http://www.what-could-possibly-go-wrong.com/bringing-mvvm-to-unity-part-1-about-mvvm-and-unity-weld).
 
-Example Unity project can be found here: [https://github.com/Real-Serious-Games/Unity-Weld-Examples](https://github.com/Real-Serious-Games/Unity-Weld-Examples).
-
 ## Installation
 
-To install Unity-Weld in a new or existing Unity project:
- - Load `Unity-Weld.sln` in Visual Studio and build it
- - Copy `UnityWeld.dll` into your Unity project and place in any directory within `Assets`
- - Copy `UnityWeld_Editor.dll` into your Unity project and place it inside an `Editor` folder within `Assets`
+Open the `manifest.json` file in the `Packages` folder of your project and add the following to the `"dependencies"` section:
 
-Alternatively, just copy the `UnityWeld/Binding` and `UnityWeld/Widgets` folders into your `Assets` directory in your Unity project, and copy all the .cs files in `UnityWeld_Editor` to a folder named `Editor` inside your `Assets` directory.
-
+```JSON
+"com.realseriousgames.unityweld" : "https://github.com/dcolina900lbs/Unity-Weld.git#upm"
+```
 
 ## Getting started
 
-Check out the [Unity-Weld-Examples](https://github.com/Real-Serious-Games/Unity-Weld-Examples) repository for some examples of how to use Unity-Weld.
+Import the **Core Samples** into your project through the Unity Package Manager UI. These examples showcase the core features of the toolset.
 
 [API docmentation](https://github.com/Real-Serious-Games/Unity-Weld/wiki) is on our wiki.
 
