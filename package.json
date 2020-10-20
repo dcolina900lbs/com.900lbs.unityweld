@@ -1,0 +1,18 @@
+{
+    "name": "com.realseriousgames.unityweld",
+    "version": "1.0.0",
+    "displayName": "Unity Weld",
+    "description": "MVVM-style data-binding system for Unity.",
+    "unity": "2019.3",
+    "author": {
+        "name": "Rory Dungan"
+    },
+    "samples": [
+        {
+            "displayName": "Core Samples",
+            "description": "Example scenes to see Unity Weld in action.",
+            "path": "Samples~/Core Samples"
+        }
+    ],
+    "hideInEditor": false
+}
