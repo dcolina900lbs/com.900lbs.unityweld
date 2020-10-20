@@ -1,6 +1,6 @@
 {
     "name": "com.realseriousgames.unityweld",
-    "version": "1.0.0",
+    "version": "0.8.0",
     "displayName": "Unity Weld",
     "description": "MVVM-style data-binding system for Unity.",
     "unity": "2019.3",
