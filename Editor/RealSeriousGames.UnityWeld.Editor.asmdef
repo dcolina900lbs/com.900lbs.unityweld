@@ -1,0 +1,17 @@
+{
+    "name": "RealSeriousGames.UnityWeld.Editor",
+    "references": [
+        "GUID:79173cdcf0b2b334a93075e302d33bbb"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
