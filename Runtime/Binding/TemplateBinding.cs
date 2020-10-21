@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
 using UnityWeld.Binding.Exceptions;
@@ -10,11 +9,10 @@ namespace UnityWeld.Binding
     /// Binds to a view and instantiates a template based on the view type.
     /// </summary>
     [AddComponentMenu("Unity Weld/Template Binding")]
-    [HelpURL("https://github.com/Real-Serious-Games/Unity-Weld")]
     public class TemplateBinding : AbstractTemplateSelector
     {
         /// <summary>
-        /// The property of the view model that is being bound to
+        /// The property of the view-model that is being bound to
         /// </summary>
         private PropertyInfo viewModelProperty;
 
@@ -28,7 +26,7 @@ namespace UnityWeld.Binding
         }
 
         /// <summary>
-        /// Connect to the attached view model.
+        /// Connect to the attached view-model.
         /// </summary>
         public override void Connect()
         {
@@ -47,7 +45,7 @@ namespace UnityWeld.Binding
                 InitializeTemplate
             );
 
-            // Get property from view model.
+            // Get property from view-model.
             viewModelProperty = ViewModel.GetType().GetProperty(propertyName);
             if (viewModelProperty == null)
             {
@@ -63,7 +61,7 @@ namespace UnityWeld.Binding
 
 
         /// <summary>
-        /// Disconnect from the attached view model.
+        /// Disconnect from the attached view-model.
         /// </summary>
         public override void Disconnect()
         {
@@ -85,7 +83,7 @@ namespace UnityWeld.Binding
         {
             DestroyAllTemplates();
 
-            // Get value from view model.
+            // Get value from view-model.
             var viewModelPropertyValue = viewModelProperty.GetValue(ViewModel, null);
             if (viewModelPropertyValue == null)
             {

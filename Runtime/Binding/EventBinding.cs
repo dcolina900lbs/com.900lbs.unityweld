@@ -6,14 +6,13 @@ using UnityWeld.Binding.Internal;
 namespace UnityWeld.Binding
 {
     /// <summary>
-    /// Class for binding Unity UI events to methods in a view model.
+    /// Class for binding Unity UI events to methods in a view-model.
     /// </summary>
     [AddComponentMenu("Unity Weld/Event Binding")]
-    [HelpURL("https://github.com/Real-Serious-Games/Unity-Weld")]
     public class EventBinding : AbstractMemberBinding
     {
         /// <summary>
-        /// Name of the method in the view model to bind to.
+        /// Name of the method in the view-model to bind to.
         /// </summary>
         public string ViewModelMethodName
         {

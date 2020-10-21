@@ -5,10 +5,9 @@ using UnityWeld.Binding.Internal;
 namespace UnityWeld.Binding
 {
     /// <summary>
-    /// Bind a sub-view model which is a property on another view model for use in the UI.
+    /// Bind a sub-view-model which is a property on another view-model for use in the UI.
     /// </summary>
-    [AddComponentMenu("Unity Weld/SubViewModel Binding")]
-    [HelpURL("https://github.com/Real-Serious-Games/Unity-Weld")]
+    [AddComponentMenu("Unity Weld/Sub View-Model Binding")]
     public class SubViewModelBinding : AbstractMemberBinding, IViewModelProvider
     {
         /// <summary>
@@ -45,7 +44,7 @@ namespace UnityWeld.Binding
         private string viewModelPropertyName;
 
         /// <summary>
-        /// Name of the type of the view model we're binding to. Set from the Unity inspector.
+        /// Name of the type of the view-model we're binding to. Set from the Unity inspector.
         /// </summary>
         public string ViewModelTypeName
         {
@@ -67,7 +66,7 @@ namespace UnityWeld.Binding
         private object viewModel;
 
         /// <summary>
-        /// Initialise the bound view model by getting the property from the parent view model.
+        /// Initialise the bound view-model by getting the property from the parent view-model.
         /// </summary>
         private void UpdateViewModel()
         {
@@ -78,7 +77,7 @@ namespace UnityWeld.Binding
             var propertyInfo = parentViewModel.GetType().GetProperty(propertyName);
             if (propertyInfo == null)
             {
-                throw new MemberNotFoundException(string.Format("Could not find property \"{0}\" on view model \"{1}\".", propertyName, parentViewModel.GetType()));
+                throw new MemberNotFoundException(string.Format("Could not find property \"{0}\" on view-model \"{1}\".", propertyName, parentViewModel.GetType()));
             }
 
             viewModel = propertyInfo.GetValue(parentViewModel, null);

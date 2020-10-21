@@ -6,8 +6,7 @@ namespace UnityWeld.Binding.Adapters
     /// <summary>
     /// Adapter that converts a single Color to one of the colors inside a ColorBlock
     /// </summary>
-    [CreateAssetMenu(menuName = "Unity Weld/Adapter options/Color to ColorBlock adapter")]
-    [HelpURL("https://github.com/Real-Serious-Games/Unity-Weld")]
+    [CreateAssetMenu(menuName = "Unity Weld/Adapter Options/Color to ColorBlock Adapter")]
     public class ColorToColorBlockAdapterOptions : AdapterOptions
     {
         public enum Role

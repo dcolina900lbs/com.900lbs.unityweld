@@ -17,7 +17,6 @@ namespace UnityWeld.Binding
     /// collection that implements INotifyCollectionChanged, like ObservableList.
     /// </summary>
     [AddComponentMenu("Unity Weld/Collection Binding")]
-    [HelpURL("https://github.com/Real-Serious-Games/Unity-Weld")]
     public class CollectionBinding : AbstractTemplateSelector
     {
         private readonly IDictionary<string, Queue<Template>> _pool = new Dictionary<string, Queue<Template>>();
@@ -131,11 +130,11 @@ namespace UnityWeld.Binding
         }
 
         /// <summary>
-        /// Bind to the view model collection so we can monitor it for changes.
+        /// Bind to the view-model collection so we can monitor it for changes.
         /// </summary>
         private void BindCollection()
         {
-            // Bind view model.
+            // Bind view-model.
             var viewModelType = ViewModel.GetType();
 
             ParseEndPointReference(ViewModelPropertyName, out var propertyName, out _);
@@ -147,7 +146,7 @@ namespace UnityWeld.Binding
                     $"Expected property {ViewModelPropertyName}, but it wasn't found on type {viewModelType}.");
             }
 
-            // Get value from view model.
+            // Get value from view-model.
             var viewModelValue = viewModelCollectionProperty.GetValue(ViewModel, null);
             if (viewModelValue == null)
             {

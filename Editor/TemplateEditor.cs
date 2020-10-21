@@ -8,7 +8,7 @@ using UnityWeld.Binding.Internal;
 namespace UnityWeld.Editor
 {
     /// <summary>
-    /// Editor for template bindings with a dropdown for selecting what view model
+    /// Editor for template bindings with a dropdown for selecting what view-model
     /// to bind to.
     /// </summary>
     [CustomEditor(typeof(Template))]
@@ -46,7 +46,7 @@ namespace UnityWeld.Editor
 
             var newSelectedIndex = EditorGUILayout.Popup(
                 new GUIContent(
-                    "Template View Model", 
+                    "Template View-Model", 
                     "Type of the view-model that this template will be bound to when it is instantiated."
                 ),
                 selectedIndex,

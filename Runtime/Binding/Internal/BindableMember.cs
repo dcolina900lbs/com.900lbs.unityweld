@@ -4,10 +4,10 @@ using System.Reflection;
 namespace UnityWeld.Binding.Internal
 {
     /// <summary>
-    /// Data structure combining a bindable property or method with the view model it belongs 
+    /// Data structure combining a bindable property or method with the view-model it belongs 
     /// to. This is needed because we can't always rely on MemberInfo.ReflectedType
-    /// returning the type of the view model if the property or method was declared in an 
-    /// interface that the view model inherits from.
+    /// returning the type of the view-model if the property or method was declared in an 
+    /// interface that the view-model inherits from.
     /// </summary>
     public class BindableMember<TMemberType> where TMemberType : MemberInfo
     {
@@ -22,7 +22,7 @@ namespace UnityWeld.Binding.Internal
         public readonly Type ViewModelType;
 
         /// <summary>
-        /// Name of the view model type.
+        /// Name of the view-model type.
         /// </summary>
         public string ViewModelTypeName
         {

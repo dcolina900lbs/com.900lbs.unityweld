@@ -1,12 +1,13 @@
 {
-    "name": "com.realseriousgames.unityweld",
-    "version": "0.8.0",
+    "name": "com.900lbs.unityweld",
+    "version": "0.9.0",
     "displayName": "Unity Weld",
     "description": "MVVM-style data-binding system for Unity.",
     "unity": "2019.3",
-    "author": {
-        "name": "Rory Dungan"
-    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dcolina900lbs/Unity-Weld"
+    }
     "samples": [
         {
             "displayName": "Core Samples",

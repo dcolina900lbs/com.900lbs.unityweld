@@ -68,7 +68,7 @@ namespace UnityWeld.Binding.Internal
         }
 
         /// <summary>
-        /// Implements default view model provider.
+        /// Implements default view-model provider.
         /// </summary>
         private static ViewModelProviderData DefaultViewModelProvider(Component component)
         {
@@ -155,7 +155,7 @@ namespace UnityWeld.Binding.Internal
         }
 
         /// <summary>
-        /// Return the type of a view model bound by an IViewModelBinding
+        /// Return the type of a view-model bound by an IViewModelBinding
         /// </summary>
         private static Type GetViewModelType(string viewModelTypeName)
         {
@@ -164,7 +164,7 @@ namespace UnityWeld.Binding.Internal
 
             if (type == null)
             {
-                throw new ViewModelNotFoundException("Could not find the specified view model \"" + viewModelTypeName + "\"");
+                throw new ViewModelNotFoundException("Could not find the specified view-model \"" + viewModelTypeName + "\"");
             }
 
             return type;
@@ -195,7 +195,7 @@ namespace UnityWeld.Binding.Internal
                     var viewModelData = component.GetViewModelData();
                     if (viewModelData != null)
                     {
-                        // Ignore view model bindings that haven't been set up yet.
+                        // Ignore view-model bindings that haven't been set up yet.
                         if (string.IsNullOrEmpty(viewModelData.TypeName))
                             continue;
 
@@ -268,7 +268,7 @@ namespace UnityWeld.Binding.Internal
         }
 
         /// <summary>
-        /// Get a list of methods in the view model that we can bind to.
+        /// Get a list of methods in the view-model that we can bind to.
         /// </summary>
         public static BindableMember<MethodInfo>[] FindBindableMethods(EventBinding targetScript)
         {

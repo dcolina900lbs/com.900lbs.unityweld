@@ -6,8 +6,8 @@ using UnityWeld.Binding.Exceptions;
 namespace UnityWeld.Binding.Internal
 {
     /// <summary>
-    /// Factory for adding the correct type of listener to a generic UnityEvent, given a view model and 
-    /// the name of a method in that view model to bind the UnityEvent to.
+    /// Factory for adding the correct type of listener to a generic UnityEvent, given a view-model and 
+    /// the name of a method in that view-model to bind the UnityEvent to.
     /// </summary>
     internal static class UnityEventBinderFactory
     {

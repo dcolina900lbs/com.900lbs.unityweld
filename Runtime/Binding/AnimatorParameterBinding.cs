@@ -7,17 +7,16 @@ using UnityWeld.Binding.Internal;
 namespace UnityWeld.Binding
 {
     /// <summary>
-    /// Bind a property in the view model to a parameter in an Animator, subscribing to OnPropertyChanged 
-    /// and updating the Animator parameter accordingly (note that this does not update the view model when
+    /// Bind a property in the view-model to a parameter in an Animator, subscribing to OnPropertyChanged 
+    /// and updating the Animator parameter accordingly (note that this does not update the view-model when
     /// the parameter changes).
     /// </summary>
     [RequireComponent(typeof(Animator))]
     [AddComponentMenu("Unity Weld/Animator Parameter Binding")]
-    [HelpURL("https://github.com/Real-Serious-Games/Unity-Weld")]
     public class AnimatorParameterBinding : AbstractMemberBinding
     {
         /// <summary>
-        /// Type of the adapter we're using to adapt between the view model property and UI property.
+        /// Type of the adapter we're using to adapt between the view-model property and UI property.
         /// </summary>
         public string ViewAdapterId
         {
@@ -29,7 +28,7 @@ namespace UnityWeld.Binding
         private string viewAdapterId;
 
         /// <summary>
-        /// Options for adapting from the view model to the UI property.
+        /// Options for adapting from the view-model to the UI property.
         /// </summary>
         public ScriptableObject ViewAdapterOptions
         {
@@ -41,7 +40,7 @@ namespace UnityWeld.Binding
         private ScriptableObject viewAdapterOptions;
 
         /// <summary>
-        /// Name of the property in the view model to bind.
+        /// Name of the property in the view-model to bind.
         /// </summary>
         public string ViewModelPropertyName
         {

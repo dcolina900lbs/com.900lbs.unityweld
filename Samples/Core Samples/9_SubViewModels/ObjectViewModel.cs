@@ -16,14 +16,14 @@ namespace UnityWeld.Examples.SubViewModels
         private ColorViewModel colorViewModel;
 
         /// <summary>
-        /// Sub-view model for controlling the color of the object.
+        /// Sub-view-model for controlling the color of the object.
         /// </summary>
         [Binding]
         public ColorViewModel SubViewModel
         {
             get
             {
-                // Lazily initialize the color view model.
+                // Lazily initialize the color view-model.
                 if (colorViewModel == null)
                 {
                     colorViewModel = new ColorViewModel(obj);

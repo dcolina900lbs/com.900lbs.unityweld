@@ -32,7 +32,7 @@ namespace UnityWeld.Binding
         protected PropertyWatcher ViewModelPropertyWatcher;
 
         /// <summary>
-        /// The name of the property we are binding to on the view model.
+        /// The name of the property we are binding to on the view-model.
         /// </summary>
         public string ViewModelPropertyName
         {
@@ -47,7 +47,7 @@ namespace UnityWeld.Binding
         }
 
         /// <summary>
-        /// All available templates indexed by the view model the are for.
+        /// All available templates indexed by the view-model the are for.
         /// </summary>
         protected IDictionary<Type, Template> AvailableTemplates
         {
@@ -174,13 +174,13 @@ namespace UnityWeld.Binding
         protected virtual void OnTemplateDestroy(Template template) { }
 
         /// <summary>
-        /// Create a clone of the template object and bind it to the specified view model.
+        /// Create a clone of the template object and bind it to the specified view-model.
         /// Place the new object under the parent at the specified index, or 0 if no index
         /// is specified.
         /// </summary>
         protected void InstantiateTemplate(object templateViewModel, int index = 0)
         {
-            Assert.IsNotNull(templateViewModel, "Cannot instantiate child with null view model");
+            Assert.IsNotNull(templateViewModel, "Cannot instantiate child with null view-model");
 
             // Select template.
             var selectedTemplate = FindTemplateForType(templateViewModel.GetType());

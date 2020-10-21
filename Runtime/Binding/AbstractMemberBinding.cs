@@ -9,7 +9,6 @@ namespace UnityWeld.Binding
     /// <summary>
     /// Base class for binders to Unity MonoBehaviours.
     /// </summary>
-    [HelpURL("https://github.com/Real-Serious-Games/Unity-Weld")]
     public abstract class AbstractMemberBinding : MonoBehaviour, IMemberBinding
     {
         private bool _isInitCalled;
@@ -35,7 +34,7 @@ namespace UnityWeld.Binding
         }
 
         /// <summary>
-        /// Scan up the hierarchy and find a view model that corresponds to the specified name.
+        /// Scan up the hierarchy and find a view-model that corresponds to the specified name.
         /// </summary>
         private object FindViewModel(string viewModelName)
         {
@@ -70,14 +69,14 @@ namespace UnityWeld.Binding
             }
 
             throw new ViewModelNotFoundException(string.Format(
-                "Tried to get view model {0} but it could not be found on "
-                + "object {1}. Check that a ViewModelBinding for that view model exists further up in "
+                "Tried to get view-model {0} but it could not be found on "
+                + "object {1}. Check that a ViewModelBinding for that view-model exists further up in "
                 + "the scene hierarchy. ", viewModelName, gameObject.name)
             );
         }
 
         /// <summary>
-        /// Make a property end point for a property on the view model.
+        /// Make a property end point for a property on the view-model.
         /// </summary>
         protected PropertyEndPoint MakeViewModelEndPoint(string viewModelPropertyName, string adapterId,
             object adapterOptions)

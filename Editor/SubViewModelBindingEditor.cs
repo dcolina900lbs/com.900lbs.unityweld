@@ -38,7 +38,7 @@ namespace UnityWeld.Editor
             ShowViewModelPropertyMenu(
                 new GUIContent(
                     "Sub View-Model Property", 
-                    "The property on the top level view model containing the sub view-model."
+                    "The property on the top level view-model containing the sub view-model."
                 ),
                 bindableProperties,
                 updatedValue => 
