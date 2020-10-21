@@ -9,16 +9,15 @@ namespace UnityWeld.Binding
 {
     [RequireComponent(typeof(Dropdown))]
     [AddComponentMenu("Unity Weld/Dropdown Binding")]
-    [HelpURL("https://github.com/Real-Serious-Games/Unity-Weld")]
     public class DropdownBinding : AbstractMemberBinding
     {
         /// <summary>
-        /// Name of the property in the view model to bind for the current selection.
+        /// Name of the property in the view-model to bind for the current selection.
         /// </summary>
         public string viewModelSelectionPropertyName;
 
         /// <summary>
-        /// Name of the property in the view model to bind for the list of options.
+        /// Name of the property in the view-model to bind for the list of options.
         /// </summary>
         public string viewModelOptionsPropertyName;
 
@@ -28,7 +27,7 @@ namespace UnityWeld.Binding
         public string exceptionPropertyName;
 
         /// <summary>
-        /// Adapter to apply to any adapter/validation exception that is assigned to the view model.
+        /// Adapter to apply to any adapter/validation exception that is assigned to the view-model.
         /// </summary>
         public string exceptionAdapterTypeName;
 
@@ -44,18 +43,18 @@ namespace UnityWeld.Binding
 
         /// <summary>
         /// Type name of the adapter for converting a selection value in the 
-        /// view model to what the UI expects (which should be a string).
+        /// view-model to what the UI expects (which should be a string).
         /// </summary>
         [FormerlySerializedAs("selectionViewModelToUIAdapter")] public string selectionViewModelToUIAdapterId;
 
         /// <summary>
         /// Type name of the adapter for converting a selection value in the 
-        /// UI back to the type needed by the view model.
+        /// UI back to the type needed by the view-model.
         /// </summary>
         public string selectionUIToViewModelAdapter;
 
         /// <summary>
-        /// Adapter for converting the options list in the view model 
+        /// Adapter for converting the options list in the view-model 
         /// to the correct format to display in the UI.
         /// </summary>
         [FormerlySerializedAs("optionsAdapter")] public string optionsAdapterId;

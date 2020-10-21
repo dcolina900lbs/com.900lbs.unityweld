@@ -6,8 +6,7 @@ namespace UnityWeld.Binding.Adapters
     /// <summary>
     /// Options for converting from a bool to a Unity color.
     /// </summary>
-    [CreateAssetMenu(menuName = "Unity Weld/Adapter options/Bool to ColorBlock adapter options")]
-    [HelpURL("https://github.com/Real-Serious-Games/Unity-Weld")]
+    [CreateAssetMenu(menuName = "Unity Weld/Adapter Options/Bool to ColorBlock Adapter Options")]
     public class BoolToColorBlockAdapterOptions : AdapterOptions
     {
         /// <summary>

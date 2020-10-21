@@ -5,15 +5,14 @@ using UnityWeld.Binding.Internal;
 namespace UnityWeld.Binding
 {
     /// <summary>
-    /// Bind to a boolean property on the view model and turn all child objects on
+    /// Bind to a boolean property on the view-model and turn all child objects on
     /// or off based on its value.
     /// </summary>
-    [AddComponentMenu("Unity Weld/ToggleActive Binding")]
-    [HelpURL("https://github.com/Real-Serious-Games/Unity-Weld")]
+    [AddComponentMenu("Unity Weld/Toggle Active Binding")]
     public class ToggleActiveBinding : AbstractMemberBinding
     {
         /// <summary>
-        /// Type of the adapter we're using to adapt between the view model property 
+        /// Type of the adapter we're using to adapt between the view-model property 
         /// and view property.
         /// </summary>
         public string ViewAdapterId
@@ -26,7 +25,7 @@ namespace UnityWeld.Binding
         private string viewAdapterId;
 
         /// <summary>
-        /// Options for adapting from the view model to the view property.
+        /// Options for adapting from the view-model to the view property.
         /// </summary>
         public ScriptableObject ViewAdapterOptions
         {
@@ -37,7 +36,7 @@ namespace UnityWeld.Binding
         [SerializeField] private ScriptableObject viewAdapterOptions;
 
         /// <summary>
-        /// Name of the property in the view model to bind.
+        /// Name of the property in the view-model to bind.
         /// </summary>
         public string ViewModelPropertyName
         {

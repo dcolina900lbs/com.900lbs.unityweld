@@ -1,7 +1,7 @@
 ﻿namespace UnityWeld.Binding
 {
     /// <summary>
-    /// Interface for wiring view-models into the hierarchy.
+    /// Interface for wiring view models into the hierarchy.
     /// </summary>
     public interface IViewModelProvider
     {

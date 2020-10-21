@@ -54,7 +54,7 @@ namespace UnityWeld.Editor
         {
             InspectorUtils.DoPopup(
                 new GUIContent(targetScript.ViewModelMethodName),
-                new GUIContent("View-Model Method", "Method on the View-Model to bind to."),
+                new GUIContent("View-Model Method", "Method on the view-model to bind to."),
                 m => m.ViewModelType + "/" + m.MemberName,
                 m => true,
                 m => m.ToString() == targetScript.ViewModelMethodName,

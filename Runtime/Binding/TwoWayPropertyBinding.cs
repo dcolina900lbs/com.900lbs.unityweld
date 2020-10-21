@@ -5,16 +5,15 @@ using UnityWeld.Binding.Internal;
 namespace UnityWeld.Binding
 {
     /// <summary>
-    /// Bind a property in the view model to one the UI, subscribing to OnPropertyChanged 
+    /// Bind a property in the view-model to one the UI, subscribing to OnPropertyChanged 
     /// and updating the UI accordingly. Also bind to a UnityEvent in the UI and update the
-    /// view model when the event is triggered.
+    /// view-model when the event is triggered.
     /// </summary>
-    [AddComponentMenu("Unity Weld/TwoWay Property Binding")]
-    [HelpURL("https://github.com/Real-Serious-Games/Unity-Weld")]
+    [AddComponentMenu("Unity Weld/Two-Way Property Binding")]
     public class TwoWayPropertyBinding : AbstractMemberBinding
     {
         /// <summary>
-        /// Name of the property in the view model to bind.
+        /// Name of the property in the view-model to bind.
         /// </summary>
         public string ViewModelPropertyName
         {
@@ -51,7 +50,7 @@ namespace UnityWeld.Binding
 
         /// <summary>
         /// Name of the type of the adapter we're using to convert values from the 
-        /// view model to the view. Can be empty for no adapter.
+        /// view-model to the view. Can be empty for no adapter.
         /// </summary>
         public string ViewAdapterId
         {
@@ -63,7 +62,7 @@ namespace UnityWeld.Binding
         private string viewAdapterId;
 
         /// <summary>
-        /// Options for the adapter from the view model to the view.
+        /// Options for the adapter from the view-model to the view.
         /// </summary>
         public ScriptableObject ViewAdapterOptions
         {
@@ -76,7 +75,7 @@ namespace UnityWeld.Binding
 
         /// <summary>
         /// Name of the type of the adapter we're using to conver values from the
-        /// view back to the view model. Can be empty for no adapter.
+        /// view back to the view-model. Can be empty for no adapter.
         /// </summary>
         public string ViewModelAdapterId
         {
@@ -88,7 +87,7 @@ namespace UnityWeld.Binding
         private string viewModelAdapterId;
 
         /// <summary>
-        /// Options for the adapter from the view to the view model.
+        /// Options for the adapter from the view to the view-model.
         /// </summary>
         public ScriptableObject ViewModelAdapterOptions
         {
@@ -112,7 +111,7 @@ namespace UnityWeld.Binding
         private string exceptionPropertyName;
 
         /// <summary>
-        /// Adapter to apply to any adapter/validation exception that is assigned to the view model.
+        /// Adapter to apply to any adapter/validation exception that is assigned to the view-model.
         /// </summary>
         public string ExceptionAdapterTypeName
         {

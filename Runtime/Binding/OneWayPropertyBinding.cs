@@ -5,16 +5,15 @@ using UnityWeld.Binding.Internal;
 namespace UnityWeld.Binding
 {
     /// <summary>
-    /// Bind a property in the view model to one on the UI, subscribing to OnPropertyChanged 
-    /// and updating the UI accordingly (note that this does not update the view model when
+    /// Bind a property in the view-model to one on the UI, subscribing to OnPropertyChanged 
+    /// and updating the UI accordingly (note that this does not update the view-model when
     /// the UI changes).
     /// </summary>
-    [AddComponentMenu("Unity Weld/OneWay Property Binding")]
-    [HelpURL("https://github.com/Real-Serious-Games/Unity-Weld")]
+    [AddComponentMenu("Unity Weld/One-Way Property Binding")]
     public class OneWayPropertyBinding : AbstractMemberBinding
     {
         /// <summary>
-        /// Type of the adapter we're using to adapt between the view model property 
+        /// Type of the adapter we're using to adapt between the view-model property 
         /// and UI property.
         /// </summary>
         public string ViewAdapterId
@@ -27,7 +26,7 @@ namespace UnityWeld.Binding
         private string viewAdapterId;
 
         /// <summary>
-        /// Options for adapting from the view model to the UI property.
+        /// Options for adapting from the view-model to the UI property.
         /// </summary>
         public ScriptableObject ViewAdapterOptions
         {
@@ -39,7 +38,7 @@ namespace UnityWeld.Binding
         private ScriptableObject viewAdapterOptions;
 
         /// <summary>
-        /// Name of the property in the view model to bind.
+        /// Name of the property in the view-model to bind.
         /// </summary>
         public string ViewModelPropertyName
         {

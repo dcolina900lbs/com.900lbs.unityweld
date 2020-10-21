@@ -11,7 +11,7 @@ namespace UnityWeld.Binding
     public interface ITemplate
     {
         /// <summary>
-        /// Set the view model and initialise all binding objects down the hierarchy.
+        /// Set the view-model and initialise all binding objects down the hierarchy.
         /// </summary>
         void InitChildBindings(object viewModel);
 
@@ -22,7 +22,6 @@ namespace UnityWeld.Binding
     /// Template for use in collection bindings.
     /// </summary>
     [AddComponentMenu("Unity Weld/Template")]
-    [HelpURL("https://github.com/Real-Serious-Games/Unity-Weld")]
     public class Template : MonoBehaviour, IViewModelProvider, ITemplate
     {
         /// <summary>
@@ -76,13 +75,13 @@ namespace UnityWeld.Binding
         }
 
         /// <summary>
-        /// Set the view model and initialise all binding objects down the hierarchy.
+        /// Set the view-model and initialise all binding objects down the hierarchy.
         /// </summary>
         public void InitChildBindings(object viewModel)
         {
-            Assert.IsNotNull(viewModel, "Cannot initialise child bindings with null view model.");
+            Assert.IsNotNull(viewModel, "Cannot initialise child bindings with null view-model.");
 
-            // Set the bound view to the new view model.
+            // Set the bound view to the new view-model.
             this.viewModel = viewModel;
             SetBindings(true);
         }

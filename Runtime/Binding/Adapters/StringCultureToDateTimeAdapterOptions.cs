@@ -6,8 +6,7 @@ namespace UnityWeld.Binding.Adapters
     /// Options for converting from a string to a DateTime using format from a specified
     /// culture.
     /// </summary>
-    [CreateAssetMenu(menuName = "Unity Weld/Adapter options/String to DateTime adapter (using culture specifier)")]
-    [HelpURL("https://github.com/Real-Serious-Games/Unity-Weld")]
+    [CreateAssetMenu(menuName = "Unity Weld/Adapter Options/String with Culture Specifier to DateTime Adapter")]
     public class StringCultureToDateTimeAdapterOptions : AdapterOptions
     {
         public string CultureName;

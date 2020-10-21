@@ -30,7 +30,7 @@ namespace UnityWeld.Editor
             ShowViewModelPropertyMenu(
                 new GUIContent(
                     "Template Property", 
-                    "Property on the view model to use for selecting templates."
+                    "Property on the view-model to use for selecting templates."
                 ),
                 TypeResolver.FindBindableProperties(targetScript),
                 updatedValue => targetScript.ViewModelPropertyName = updatedValue,

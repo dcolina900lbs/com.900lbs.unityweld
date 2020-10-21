@@ -93,7 +93,7 @@ namespace UnityWeld.Editor
 
             if (_autoConnectionProperty != null)
             {
-                EditorGUILayout.PropertyField(_autoConnectionProperty);
+                EditorGUILayout.PropertyField(_autoConnectionProperty, new GUIContent("Is Auto Connection", "Whether this binding is automatically connected."));
             }
 
             OnInspector();
