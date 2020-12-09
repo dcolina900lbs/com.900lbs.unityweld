@@ -38,7 +38,7 @@ namespace UnityWeld.Binding
         /// </summary>
         private object FindViewModel(string viewModelName)
         {
-            var trans = transform.parent;
+            var trans = transform;
             while (trans != null)
             {
                 var components = trans.GetComponents<MonoBehaviour>();
@@ -50,8 +50,10 @@ namespace UnityWeld.Binding
                 }
 
                 var providedViewModel = components
-                    .Select(component => component.GetViewModelData())
                     .Where(component => component != null)
+                    .Where(component => component != this)
+                    .Select(component => component.GetViewModelData())
+                    .Where(viewModelData => viewModelData != null)
                     .FirstOrDefault(
                         viewModelData => viewModelData.TypeName == viewModelName &&
 #pragma warning disable 252,253 // Warning says unintended reference comparison, but we do want to compare references
