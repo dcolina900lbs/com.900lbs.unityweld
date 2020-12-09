@@ -181,9 +181,8 @@ namespace UnityWeld.Binding.Internal
             var trans = memberBinding.transform;
             while (trans != null)
             {
-                var buffer = Buffer.MonoBehaviours2;
-                trans.GetComponents<MonoBehaviour>(buffer);
-                foreach (var component in buffer)
+                var components = trans.GetComponents<MonoBehaviour>();
+                foreach (var component in components)
                 {
                     // Can't bind to self or null
                     if (component == null || component == memberBinding)

@@ -41,16 +41,15 @@ namespace UnityWeld.Binding
             var trans = transform.parent;
             while (trans != null)
             {
-                var buffer = Buffer.MonoBehaviours1;
-                trans.GetComponents<MonoBehaviour>(buffer);
-                var monoBehaviourViewModel = buffer
+                var components = trans.GetComponents<MonoBehaviour>();
+                var monoBehaviourViewModel = components
                     .FirstOrDefault(component => component.GetType().ToString() == viewModelName);
                 if (monoBehaviourViewModel != null)
                 {
                     return monoBehaviourViewModel;
                 }
 
-                var providedViewModel = buffer
+                var providedViewModel = components
                     .Select(component => component.GetViewModelData())
                     .Where(component => component != null)
                     .FirstOrDefault(
