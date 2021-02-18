@@ -414,6 +414,7 @@ MonoBehaviour:
   viewModelPropertyName: UnityWeld.Examples.Collections.ExampleViewModel.Items
   _itemsContainer: {fileID: 1041778851}
   _templateInitialPoolCount: 0
+  _supportSingleMembers: 0
 --- !u!114 &1041778853
 MonoBehaviour:
   m_ObjectHideFlags: 0

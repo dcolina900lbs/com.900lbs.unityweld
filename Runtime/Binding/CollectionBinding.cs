@@ -30,6 +30,8 @@ namespace UnityWeld.Binding
         private Transform _itemsContainer;
         [SerializeField] 
         private int _templateInitialPoolCount = 0;
+        [SerializeField]
+        private bool _supportSingleMembers = true;
 
         public Transform ItemsContainer
         {
@@ -92,6 +94,9 @@ namespace UnityWeld.Binding
                     {
                         var list = _viewModelCollectionValue as IList;
 
+                        if (list.Count == 1 && !_supportSingleMembers)
+                            return;
+
                         foreach (var item in e.NewItems)
                         {
                             int index;
@@ -112,6 +117,14 @@ namespace UnityWeld.Binding
                 case NotifyCollectionChangedAction.Remove:
                     // TODO: respect item order
                     // Remove items that have been deleted.
+                    var modifiedList = _viewModelCollectionValue as IList;
+
+                    if (modifiedList.Count == 1 && !_supportSingleMembers)
+                    {
+                        DestroyAllTemplates();
+                        return;
+                    }
+
                     if (e.OldItems != null)
                     {
                         foreach (var item in e.OldItems)
@@ -162,9 +175,22 @@ namespace UnityWeld.Binding
 
             // Generate children
             var collectionAsList = _viewModelCollectionValue.Cast<object>().ToList();
-            for (var index = 0; index < collectionAsList.Count; index++)
+            if (_supportSingleMembers)
             {
-                InstantiateTemplate(collectionAsList[index], index);
+                for (var index = 0; index < collectionAsList.Count; index++)
+                {
+                    InstantiateTemplate(collectionAsList[index], index);
+                }
+            }
+            else
+            {
+                if (collectionAsList.Count != 1)
+                {
+                    for (var index = 0; index < collectionAsList.Count; index++)
+                    {
+                        InstantiateTemplate(collectionAsList[index], index);
+                    }
+                }
             }
 
             // Subscribe to collection changed events.

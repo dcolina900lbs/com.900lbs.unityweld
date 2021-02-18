@@ -11,6 +11,7 @@ namespace UnityWeld.Editor
         private CollectionBinding _targetScript;
         private SerializedProperty _templateInitialPoolCountProperty;
         private SerializedProperty _itemsContainerProperty;
+        private SerializedProperty _supportSingleMembersProperty;
         private SerializedProperty _templatesProperty;
         
         private bool _viewModelPrefabModified;
@@ -21,6 +22,7 @@ namespace UnityWeld.Editor
             _targetScript = (CollectionBinding)target;
             _templateInitialPoolCountProperty = serializedObject.FindProperty("_templateInitialPoolCount");
             _itemsContainerProperty = serializedObject.FindProperty("_itemsContainer");
+            _supportSingleMembersProperty = serializedObject.FindProperty("_supportSingleMembers");
             _templatesProperty = serializedObject.FindProperty("_templates");
         }
 
@@ -31,6 +33,7 @@ namespace UnityWeld.Editor
             EditorGUILayout.PropertyField(_templateInitialPoolCountProperty, new GUIContent("Initial Pool Count", "Initial count of items that will be populated at start."));
             EditorGUILayout.PropertyField(_itemsContainerProperty, new GUIContent("Items Container", "Container where items will be populated."));
             EditorGUILayout.PropertyField(_templatesProperty, new GUIContent("Templates", "Templates to select from when populating from the view-model collection."), true);
+            EditorGUILayout.PropertyField(_supportSingleMembersProperty, new GUIContent("Support Single Members", "Whether to spawn templates if only a single member is in the collection."), true);
             
             EditorStyles.label.fontStyle = _viewModelPrefabModified ? FontStyle.Bold : DefaultFontStyle;
             ShowViewModelPropertyMenu(
