@@ -93,6 +93,24 @@ namespace UnityWeld.Binding.Adapters
         }
 
         /// <summary>
+        /// Adapter for converting from a float to a double.
+        /// </summary>
+        [DisplayName("Float To Double")]
+        public static double FloatToDouble(float valueIn)
+        {
+            return (double)valueIn;
+        }
+
+        /// <summary>
+        /// Adapter for converting from a double to a float.
+        /// </summary>
+        [DisplayName("Double To Float")]
+        public static float DoubleToFloat(double valueIn)
+        {
+            return (float)valueIn;
+        }
+
+        /// <summary>
         /// Adapter that converts a float to a string.
         /// </summary>
         public static string FloatToString(float valueIn, FloatToStringAdapterOptions options)
@@ -155,6 +173,8 @@ namespace UnityWeld.Binding.Adapters
             TypeResolver.RegisterAdapter(new AdapterInfo<DateTime, string, DateTimeToStringAdapterOptions>(DateTimeToString, nameof(DateTimeToString)));
             TypeResolver.RegisterAdapter(new AdapterInfo<float, DateTime>(FloatToDateTime, nameof(FloatToDateTime)));
             TypeResolver.RegisterAdapter(new AdapterInfo<float, string, FloatToStringAdapterOptions>(FloatToString, nameof(FloatToString)));
+            TypeResolver.RegisterAdapter(new AdapterInfo<float, double>(FloatToDouble, nameof(FloatToDouble)));
+            TypeResolver.RegisterAdapter(new AdapterInfo<double, float>(DoubleToFloat, nameof(DoubleToFloat)));
             TypeResolver.RegisterAdapter(new AdapterInfo<int, string>(IntToString, nameof(IntToString)));
             TypeResolver.RegisterAdapter(new AdapterInfo<string, DateTime, StringCultureToDateTimeAdapterOptions>(StringCultureToDateTime, nameof(StringCultureToDateTime)));
             TypeResolver.RegisterAdapter(new AdapterInfo<string, bool>(StringEmptyToBool, nameof(StringEmptyToBool)));
